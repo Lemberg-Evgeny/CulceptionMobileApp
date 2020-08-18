@@ -23,7 +23,9 @@
             color: white;
         }
 
-        .main {}
+        .main-container {
+            min-height: 100vh;
+        }
 
         .header {}
 
@@ -32,10 +34,11 @@
         .bg-head {
             background-image: url(./img/header.png);
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center top;
             /* background-color: #ffffff; */
             /* border: 1px solid white; */
             min-height: 353px;
+            /* min-height: 100vh; */
         }
 
         .logo {}
@@ -47,7 +50,7 @@
             border-radius: 50%
         }
 
-        .parallelogram {
+        /* .parallelogram {
             display: inline-block;
             width: 100px;
             height: 100px;
@@ -57,7 +60,7 @@
             -o-transform: skew(-20deg);
             z-index: 9;
 
-        }
+        } */
 
 
 
@@ -81,10 +84,10 @@
 </head>
 
 <body>
-    <center>
-        <div class="main-container container-fluid">
+    <!-- <center> -->
+        <div class="main-container container justify-content-center">
 
-            <header>
+            <header class="container">
                 <div class="row">
                     <div class="bg-head col col-md text-center">
                         <!-- <img class="bg_head" src="./img/header.png" alt=""> -->
@@ -96,7 +99,7 @@
             </header>
 
 
-            <section class="content">
+            <section class="content container">
                 <div class="title">wi make it personal</div>
                 <div class="sub-title">All the information about your plant providet by our in hous labs</div>
                 <div class="row">
@@ -107,6 +110,7 @@
                     <div class="circle"></div>
 
                 </div>
+                
             </section>
 
             <footer>
@@ -131,7 +135,7 @@
 
             </footer>
         </div>
-    </center>
+    <!-- </center> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
