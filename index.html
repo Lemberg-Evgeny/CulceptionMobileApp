@@ -63,8 +63,9 @@
         } */
 
 
-nav{
+.nav{
     display: flex;
+    overflow: hidden;
 }
         .nav-item {
             background-color: burlywood;
@@ -73,7 +74,6 @@ nav{
             border: 1px solid black;
             cursor: pointer;
             min-width: 10vw;
-            
         }
 
         .nav-link {
@@ -86,6 +86,10 @@ nav{
             -moz-transform: skew(-20deg);
             -o-transform: skew(-20deg);
             left: -40px;
+            /* overflow: hidden; */
+        }
+        .nav-link:active{
+            padding-left: 30px;
         }
     </style>
 
@@ -125,13 +129,13 @@ nav{
         <footer>
 
 
-            <!-- <nav> -->
+           //выставить элементы справа. а блоку задать чёрный бекграунд
             <ul class="nav justify-content-center border">
-                <li class="nav-item col">
+                <!-- <li class="nav-item col">
                     dfdfdf
-                </li>
+                </li> -->
                 <li class="nav-item bg-success" name="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link active" href="#">LINK</a>
                 </li>
                 <li class="nav-item bg-dark" name="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -140,7 +144,7 @@ nav{
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item bg-info" name="nav-item">
-                    <a class="nav-link" href="#">Disabled</a>
+                    <a class="nav-link" href="#">link</a>
                 </li>
             </ul>
 
