@@ -85,12 +85,11 @@
             -webkit-transform: skew(-20deg);
             -moz-transform: skew(-20deg);
             -o-transform: skew(-20deg);
-            left: -40px;
+            /* left: -40px; */
             /* overflow: hidden; */
         }
-        .nav-link:active{
-            padding-left: 30px;
-        }
+       
+       
     </style>
 
     <title>HOME PAGE</title>
@@ -130,20 +129,17 @@
 
 
            //выставить элементы справа. а блоку задать чёрный бекграунд
-            <ul class="nav justify-content-center border">
-                <!-- <li class="nav-item col">
-                    dfdfdf
-                </li> -->
-                <li class="nav-item bg-success" name="nav-item">
+            <ul class="nav row justify-content-end border">
+                <li class="nav-item bg-success col-2" name="nav-item">
                     <a class="nav-link active" href="#">LINK</a>
                 </li>
-                <li class="nav-item bg-dark" name="nav-item">
+                <li class="nav-item bg-dark col-2" name="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item bg-danger" name="nav-item">
+                <li class="nav-item bg-danger col-2" name="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item bg-info" name="nav-item">
+                <li class="nav-item bg-info col-2" name="nav-item">
                     <a class="nav-link" href="#">link</a>
                 </li>
             </ul>
