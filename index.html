@@ -60,12 +60,19 @@
             flex-direction: row;
             justify-content: flex-end;
         }
+/* 
+        .nav ul li{
+            margin: 5px;
+        } */
 
         .nav::before {
             /* width: 120px; */
             content: 'All rights reserved  for Culception';
-            border-right: 1px solid #fff;
-            margin-right: 30px;
+            border: 1px solid #fff;
+            min-height: 20px;
+            /* margin-right: 30px; */
+            /* padding: 15px;
+            margin:5px; */
         }
 
         .nav-item {
@@ -82,7 +89,9 @@
             text-transform: uppercase;
             /* display: block; */
             flex-direction: column;
+            padding: 5px;
         }
+      
 
         .nav-text{
             font-size: 1rem;
@@ -103,6 +112,7 @@
             background-image: linear-gradient(to right, #6d9eff, #71bffe);
         }
         #share{
+            margin-right: -20px;
             background-image: linear-gradient(to right, #87d4ab, #95ff6d);
         }
 
@@ -148,9 +158,12 @@
         <footer class="container-fluid">
 
             <ul class="nav row">
+                <li class="col">
+                    <span class="">Find us on</span>
+                </li>
                 <li id="my-package" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-cube" aria-hidden="true"></div>
-                    <div class="fa fa-inbox" aria-hidden="true"></div>
+                    <!-- <div class="fa fa-inbox" aria-hidden="true"></div> -->
                     <div class="nav-text">my package</div>
                 </li>
                 <li id="lab-tests" class="nav-item col-2 text-center" name="nav-item">
