@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
         html {
             box-sizing: border-box;
@@ -50,19 +50,6 @@
             border-radius: 50%
         }
 
-        /* .parallelogram {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            transform: skew(-20deg);
-            -webkit-transform: skew(-20deg);
-            -moz-transform: skew(-20deg);
-            -o-transform: skew(-20deg);
-            z-index: 9;
-
-        } */
-
-
 
         .nav {
             display: flex;
@@ -82,39 +69,47 @@
         }
 
         .nav-item {
-            background-color:brown;
-            font-weight: bold;
+            /* background-color: brown; */
             color: #fff;
-            border: 1px solid black;
             cursor: pointer;
             transform: skew(-20deg);
             -webkit-transform: skew(-20deg);
             -moz-transform: skew(-20deg);
             -o-transform: skew(-20deg);
+            font-size: 2.5rem;
+            color: white;
+            /* border: 1px solid rgb(221, 221, 221); */
+            text-transform: uppercase;
+            /* display: block; */
+            flex-direction: column;
         }
 
-       
-        .nav-link {
-            /* align-self: stretch; */
-            background-repeat: no-repeat;
-            height: 90px;
+        .nav-text{
+            font-size: 1rem;
+            transform: skew(20deg);
+        }
+
+        .fa{
+            transform: skew(20deg);
+        }
+
+        #my-package{
+            background-image: linear-gradient(to right, #bbbd5b, #e59979);
+        }
+        #lab-tests{
+            background-image: linear-gradient(to right, #be7080, #a46fcd);
+        }
+        #more-info{
+            background-image: linear-gradient(to right, #6d9eff, #71bffe);
+        }
+        #share{
+            background-image: linear-gradient(to right, #87d4ab, #95ff6d);
         }
 
 
         .nav-item[name="nav-item"] {
-            
-            /* left: -40px; */
-            /* overflow: hidden; */
         }
 
-        .my-package {}
-        .lab-test {}
-        .more-info {}
-        .share{
-            background-image: url(./img/nav-item-share.png);
-            background-position: center;
-            padding: 2px;
-        }
     </style>
 
     <title>HOME PAGE</title>
@@ -152,18 +147,23 @@
 
         <footer class="container-fluid">
 
-            <ul class="nav row border">
-                <li class="nav-item my-package col-2" name="nav-item">
-                    <a class="nav-link active" href="#"></a>
+            <ul class="nav row">
+                <li id="my-package" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-cube" aria-hidden="true"></div>
+                    <div class="fa fa-inbox" aria-hidden="true"></div>
+                    <div class="nav-text">my package</div>
                 </li>
-                <li class="nav-item lab-test col-2" name="nav-item">
-                    <a class="nav-link" href="#"></a>
+                <li id="lab-tests" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-flask" aria-hidden="true"></div>
+                    <div class="nav-text">lab tests</div>
                 </li>
-                <li class="nav-item more-info col-2" name="nav-item">
-                    <a class="nav-link" href="#"></a>
+                <li id="more-info" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-info-circle" aria-hidden="true"></div>
+                    <div class="nav-text">more info</div>
                 </li>
-                <li class="nav-item col-2" name="nav-item">
-                    <a class="nav-link share" href="#"></a>
+                <li id="share" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-share-alt" aria-hidden="true"></div>
+                    <div class="nav-text">share</div>
                 </li>
             </ul>
 
