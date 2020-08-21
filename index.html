@@ -26,30 +26,27 @@
         body {
             background-color: #26282a;
             color: white;
-            min-height: 100vh;
+            /* min-height: 100vh; */
+            margin: 0;
+            padding: 0;
         }
 
         .main-container {
-            min-height: 100vh;
-            min-width: 100vw;
+            /* min-height: 100vh; */
+            /* min-width: 100vw; */
+            margin: 0;
+            padding: 0;
         }
-
-        .header {}
-
-        .head {}
 
         .bg-head {
             background-image: url(./img/header.png);
             background-repeat: no-repeat;
             background-position: center top;
             background-size: contain;
-            /* background-color: #ffffff; */
             border: 1px solid white;
             /* min-height: 550px; */
             /* min-height: 100vh; */
         }
-
-        .logo {}
 
         .circle {
             width: 100px;
@@ -67,58 +64,51 @@
             background: #000;
             flex-direction: row;
             justify-content: flex-end;
+            
         }
 
         .copyright, .find{
            font-size: .4em;
-           /* word-wrap: break-word; */
-        }
-        
-
-        /* 
-        .nav ul li{
-            margin: 5px;
-        } */
-
-        .nav::before {
-            /* width: 120px; */
-            /* font-size: .3em; */
-            /* content: 'All rights reserved  for Culception'; */
-            /* border: 1px solid #fff; */
-            /* min-height: 15px */
-            /* margin-right: 30px; */
-            /* padding: 15px;
-            margin:5px; */
+          margin-left: .1em;
+          margin-top: .1em;
+           /* word-break: keep-all; */
         }
 
         .nav-item {
-            /* background-color: brown; */
             color: #fff;
             cursor: pointer;
             transform: skew(-10deg);
-            /* -webkit-transform: skew(-20deg);
-            -moz-transform: skew(-20deg);
-            -o-transform: skew(-20deg); */
-            font-size: 1.5em;
+            -webkit-transform: skew(-10deg);
+            -moz-transform: skew(-10deg);
+            -o-transform: skew(-10deg);
+            font-size: 1em;
             color: white;
-            /* border: 1px solid rgb(221, 221, 221); */
             text-transform: uppercase;
-            /* display: block; */
             flex-direction: column;
             padding: 5px 10px;
         }
 
-
-        .nav-item .nav-text {
-            /* display: flex; */
-            font-size: .4em;
-            transform: skew(10deg);
-            /* word-break: keep-all; */
-            font-family: Montserrat-light;
+        .nav-item:hover, .nav-item.active{
+          min-width: 100px;
+          box-shadow: 0 0 5px white;
+          box-sizing: content-box;
         }
 
-        .nav-item .fa {
-            transform: skew(20deg);
+        .nav-item .nav-text {
+            font-size: .4em;
+            transform: skew(10deg);
+            -webkit-transform: skew(10deg);
+            -moz-transform: skew(10deg);
+            -o-transform: skew(10deg);
+            font-family: Montserrat-light;
+            text-shadow: 0 0 5px black;
+        }
+        .nav-item .fa{
+            transform: skew(10deg);
+            -webkit-transform: skew(10deg);
+            -moz-transform: skew(10deg);
+            -o-transform: skew(10deg);
+            text-shadow: 0 0 5px black;
         }
 
         #my-package {
@@ -138,8 +128,6 @@
             background-image: linear-gradient(to right, #87d4ab, #95ff6d);
         }
 
-
-        .nav-item[name="nav-item"] {}
     </style>
 
     <title>HOME PAGE</title>
@@ -184,39 +172,34 @@
         <footer class="container justify-content-center">
 
             <ul class="nav row">
-                <!-- <li class="col">
-                    <span class="">Find us on</span>
-                    <div class="row">
+                <li class="col">
+                    <span class="copyright row">All rights reserved for Culception, StreetName 34, Herzliya.</span><br>
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </li>
+                <!-- <li class="col-md">
+                    <span class="find">Find us on</span>
+                    <div class="row justify-content-around">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i>
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                     </div>
                 </li> -->
-                <li class="col">
-                    <span class="copyright">All rights reserved for Culception</span>
-                </li>
-                <li class="col">
-                    <span class="find">Find us on</span>
-                    <div class="row">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </div>
-                </li>
-                <li id="my-package" class="nav-item col-md-2 text-center" name="nav-item">
+                <li id="my-package" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-cube mt-3" aria-hidden="true"></div>
                     <!-- <div class="fa fa-inbox" aria-hidden="true"></div> -->
                     <div class="nav-text">my package</div>
                 </li>
-                <li id="lab-tests" class="nav-item col-md-2 text-center" name="nav-item">
+                <li id="lab-tests" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-flask mt-3" aria-hidden="true"></div>
                     <div class="nav-text">lab tests</div>
                 </li>
-                <li id="more-info" class="nav-item col-md-2 text-center" name="nav-item">
+                <li id="more-info" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-info-circle mt-3" aria-hidden="true"></div>
                     <div class="nav-text">more info</div>
                 </li>
-                <li id="share" class="nav-item col-md-2 text-center" name="nav-item">
+                <li id="share" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-share-alt mt-3" aria-hidden="true"></div>
                     <div class="nav-text">share</div>
                 </li>
