@@ -15,11 +15,18 @@
             font-family: Montserrat-light;
             src: url(./fonts/Montserrat/Montserrat-Light.ttf);
         }
+        @font-face {
+            font-family: Enfatica;
+            src: url(./fonts/Enfatica/Enfatica.otf);
+        }
 
         @font-face {
             font-family: Oswald;
             src: url(./fonts/Oswald/Oswald-Light.ttf);
         }
+
+        
+
 
         *,
         html {
@@ -29,11 +36,14 @@
         }
 
         body {
+            display: flex;
             background-color: #26282a;
             color: white;
             /* min-height: 100vh; */
             margin: 0;
             padding: 0;
+            justify-content: center;
+            user-select: none;
         }
 
         .main-container {
@@ -51,6 +61,29 @@
             /* border: 1px solid white; */
             /* min-height: 550px; */
             min-height: 355px;
+            position: relative;
+        }
+
+        .logo{
+            margin-top: 10%;
+            box-shadow: 0 0 5px black;
+            border-radius: 50%;
+            /* display: block; */
+        }
+
+        .logo-title {
+            text-transform: uppercase;
+            font-family: Enfatica;
+            font-size: 3.5em;
+            text-shadow: 0 0 5px black;
+            margin-top: -5%;
+        }
+
+        .logo-sub {
+            font-family: Oswald;
+            font-size: 0.7em;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px black;
         }
 
         .circle {
@@ -64,24 +97,25 @@
             /* font-size: 1.4em; */
         }
 
-        .counter-title{
+        .counter-title {
             font-size: 1em;
             position: absolute;
             left: 1.6em;
             top: .2em;
         }
-        
-        .counter{
+
+        .counter {
             font-size: 1.8em;
             position: absolute;
             left: .6em;
             top: 1em;
         }
 
-        .counter::after{
-            content:"%";
+        .counter::after {
+            content: "%";
             font-size: .8em;
         }
+
         /* content: attr(data-target)" %"; */
 
         .nav {
@@ -92,15 +126,19 @@
             background: #000;
             flex-direction: row;
             justify-content: flex-end;
+            /* min-height: 5vh; */
 
         }
 
-        .copyright,
-        .find {
+        .copyright {
             font-size: .4em;
-            margin-left: .1em;
-            margin-top: .1em;
+            /* margin-left: .1em */
+            /* margin-top: .1em; */
             /* word-break: keep-all; */
+        }
+
+        .find .fa {
+            margin-right: .3em;
         }
 
         .nav-item {
@@ -174,7 +212,7 @@
                     <!-- <img class="bg_head" src="./img/header.png" alt=""> -->
                     <img class="logo" src=".\img\logo.png" alt="">
                     <div class="logo-title">Culception</div>
-                    <div class="logo-sub mb-4">the next ciltivation era</div>
+                    <div class="logo-sub">the next cultivation era</div>
                 </div>
             </div>
         </header>
@@ -202,12 +240,17 @@
         <footer class="container justify-content-center">
 
             <ul class="nav row">
-                <li class="col">
-                    <span class="copyright row">All rights reserved for Culception, StreetName 34, Herzliya.</span>
-                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                <li class="col m-1">
+                    <div class="copyright row">All rights reserved for Culception, StreetName 34, Herzliya.</div>
+                    <!-- <div class="copyright row">StreetName 34, Herzliya.</div> -->
+                    <div class="copyright row mt-1">Find us:</div>
+                    <div class="row mt-1 find">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
                 </li>
+
                 <!-- <li class="col-md">
                     <span class="find">Find us on</span>
                     <div class="row justify-content-around">
