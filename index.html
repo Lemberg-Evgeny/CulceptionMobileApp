@@ -61,22 +61,28 @@
             position: relative;
             border: 6px solid #292d2c;
             font-family: Oswald;
-            font-size: 1.4em;
-
+            /* font-size: 1.4em; */
         }
 
-        .circle::after {
+        .counter-title{
+            font-size: 1em;
             position: absolute;
-            /* content: 'THC'; */
-            content: attr(data-target)" %";
-            border: 1px solid red;
-            word-wrap: break-word;
-            left: 27%;
-            top: 3%;
-            /* font-size: 1.3em; */
-
+            left: 1.6em;
+            top: .2em;
+        }
+        
+        .counter{
+            font-size: 1.8em;
+            position: absolute;
+            left: .6em;
+            top: 1em;
         }
 
+        .counter::after{
+            content:"%";
+            font-size: .8em;
+        }
+        /* content: attr(data-target)" %"; */
 
         .nav {
             /* display: flex; */
@@ -178,19 +184,18 @@
             <div class="title">wi make it personal</div>
             <div class="sub-title">All the information about your plant providet by our in hous labs</div>
             <div class="row justify-content-around">
-                <div class="circle counter" data-target="18">0</div>
-                <div class="circle counter" data-target="47">0</div>
-                <div class="circle counter" data-target="25">0</div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+                <div class="circle">
+                    <div class="counter-title">HRT</div>
+                    <div class="counter" data-target="18"></div>
+                </div>
+                <div class="circle">
+                    <div class="counter-title">GDW</div>
+                    <div class="counter" data-target="47"></div>
+                </div>
+                <div class="circle">
+                    <div class="counter-title">KFT</div>
+                    <div class="counter" data-target="39"></div>
+                </div>
             </div>
         </section>
 
@@ -237,7 +242,7 @@
     <!-- Optional JavaScript -->
     <script>
         const counters = document.querySelectorAll('.counter');
-        const speed = 200; // The lower the slower
+        const speed = 300; // The lower the slower
 
         counters.forEach(counter => {
             const updateCount = () => {
@@ -247,8 +252,8 @@
                 // Lower inc to slow and higher to slow
                 const inc = target / speed;
 
-                // console.log(inc);
-                // console.log(count);
+                console.log(inc);
+                console.log(count);
 
                 // Check if target is reached
                 if (count < target) {
