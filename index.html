@@ -76,7 +76,7 @@
             font-family: Enfatica;
             font-size: 3.5em;
             text-shadow: 0 0 5px black;
-            margin-top: -5%;
+            /* margin-top: -5%; */
             /* border: 1px solid white; */
         }
 
@@ -85,7 +85,7 @@
             font-size: 0.7em;
             text-transform: uppercase;
             text-shadow: 0 0 5px black;
-            margin-top: -2%;
+            /* margin-top: -2%; */
         }
 
         .circle {
@@ -212,7 +212,7 @@
 
         <header class="container">
             <div class="row">
-                <div class="bg-head col col-md text-center">
+                <div class="bg-head col-md text-center">
                     <!-- <img class="bg_head" src="./img/header.png" alt=""> -->
                     <img class="logo" src=".\img\logo.png" alt="">
                     <div class="logo-title">Culception</div>
@@ -340,6 +340,11 @@
 
             updateCount();
         });
+
+        //nav items
+        let navItems = document.querySelectorAll('.nav-item');
+       
+        console.log(navItems);
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
