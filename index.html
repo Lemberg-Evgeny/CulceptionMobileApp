@@ -85,7 +85,7 @@
             font-size: 0.7em;
             text-transform: uppercase;
             text-shadow: 0 0 5px black;
-            margin-top: -2%;
+            margin-top: -5%;
         }
 
         .circle {
@@ -203,7 +203,7 @@
         }
     </style>
 
-    <title>HOME PAGE</title>
+    <title>My Package</title>
 </head>
 
 <body>
@@ -284,29 +284,20 @@
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                     </div>
                 </li>
-
-                <!-- <li class="col-md">
-                    <span class="find">Find us on</span>
-                    <div class="row justify-content-around">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </div>
-                </li> -->
-                <li id="btn-my-package" class="nav-item col-2 text-center" name="nav-item">
+                <li id="btn-my-package" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-cube" aria-hidden="true"></div>
                     <!-- <div class="fa fa-inbox" aria-hidden="true"></div> -->
                     <div class="nav-text">my package</div>
                 </li>
-                <li id="btn-lab-tests" class="nav-item col-2 text-center" name="nav-item">
+                <li id="btn-lab-tests" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-flask" aria-hidden="true"></div>
                     <div class="nav-text">lab tests</div>
                 </li>
-                <li id="btn-more-info" class="nav-item col-2 text-center" name="nav-item">
+                <li id="btn-more-info" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-info-circle" aria-hidden="true"></div>
                     <div class="nav-text">more info</div>
                 </li>
-                <li id="btn-share" class="nav-item col-2 text-center" name="nav-item">
+                <li id="btn-share" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
                     <div class="fa fa-share-alt" aria-hidden="true"></div>
                     <div class="nav-text">share</div>
                 </li>
@@ -343,8 +334,20 @@
 
         //nav items
         let navItems = document.querySelectorAll('.nav-item');
-       
         console.log(navItems);
+        
+        const navItem = (item)=>{
+
+            navItems.forEach(el=>{
+                if (!el.classList == 'active') {
+                    // el.classList.remove("active");
+                    item.classList.add("active");
+                }else{
+                    el.classList.remove("active");
+                }
+            });
+            
+        }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
