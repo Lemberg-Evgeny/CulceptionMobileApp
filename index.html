@@ -15,6 +15,7 @@
             font-family: Montserrat-light;
             src: url(./fonts/Montserrat/Montserrat-Light.ttf);
         }
+
         @font-face {
             font-family: Enfatica;
             src: url(./fonts/Enfatica/Enfatica.otf);
@@ -25,7 +26,7 @@
             src: url(./fonts/Oswald/Oswald-Light.ttf);
         }
 
-        
+
 
 
         *,
@@ -64,7 +65,7 @@
             position: relative;
         }
 
-        .logo{
+        .logo {
             margin-top: 10%;
             box-shadow: 0 0 5px black;
             border-radius: 50%;
@@ -89,8 +90,8 @@
         }
 
         .circle {
-            width: 100px;
-            height: 100px;
+            width: 4em;
+            height: 4em;
             background: #2f5c43;
             border-radius: 50%;
             position: relative;
@@ -116,6 +117,44 @@
         .counter::after {
             content: "%";
             font-size: .8em;
+        }
+
+        .info {
+            background: #393b3d;
+            border-radius: 15px;
+        }
+
+        .info-title {
+            text-transform: uppercase;
+            font-family: Montserrat-light;
+            font-size: 1.4em;
+            font-weight: bolder;
+        }
+
+        .info-data {
+            text-transform: uppercase;
+            font-family: Montserrat-light;
+            font-size: .6em;
+            font-weight: bolder;
+            list-style: none;
+        }
+
+        .info-description {
+            font-family: Montserrat-light;
+            font-size: .6em;
+        }
+       
+
+        .wrap {
+            position: relative;
+        }
+
+        .img {
+           z-index: 10;
+            position: absolute;
+            margin-left: 35%;
+            block-size: 11em;
+            /* left: -1em; */
         }
 
         /* content: attr(data-target)" %"; */
@@ -156,7 +195,7 @@
             flex-direction: column;
             padding: 5px 10px;
             margin-left: -1px;
-            
+
         }
 
         .nav-item:hover,
@@ -222,54 +261,64 @@
         </header>
 
 
-        <section class="content container justify-content-center">
-            <div class="title">wi make it personal</div>
-            <div class="sub-title">All the information about your plant providet by our in hous labs</div>
-            <div class="row justify-content-around">
-                <div class="circle">
-                    <div class="counter-title">HRT</div>
-                    <div class="counter" data-target="18"></div>
-                </div>
-                <div class="circle">
-                    <div class="counter-title">GDW</div>
-                    <div class="counter" data-target="47"></div>
-                </div>
-                <div class="circle">
-                    <div class="counter-title">KFT</div>
-                    <div class="counter" data-target="39"></div>
-                </div>
-            </div>
+        <section class="content container border">
+            <center>
+                <div class="slogan">wi make it personal</div>
+                <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
 
-            <div class="row justify-content-around">
-                <div class="circle">
-                    <div class="counter-title">HRT</div>
-                    <div class="counter" data-target="100"></div>
+                <div class="row justify-content-center mb-3 border">
+                    <div class="col">
+                        <div class="circle">
+                            <div class="counter-title">HRT</div>
+                            <div class="counter" data-target="18"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="circle">
+                            <div class="counter-title">GDW</div>
+                            <div class="counter" data-target="47"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="circle">
+                            <div class="counter-title">KFT</div>
+                            <div class="counter" data-target="39"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle">
-                    <div class="counter-title">GDW</div>
-                    <div class="counter" data-target="15"></div>
-                </div>
-                <div class="circle">
-                    <div class="counter-title">KFT</div>
-                    <div class="counter" data-target="77"></div>
-                </div>
-            </div>
 
-            <div class="row justify-content-around">
-                <div class="circle">
-                    <div class="counter-title">HRT</div>
-                    <div class="counter" data-target="90"></div>
+                <div class="row pl-2 wrap mb-3 border">
+                    <div class="col-6 info mt-2 text-left">
+                        <div class="info-title pt-3">sativa</div>
+                        <ul class="info-data">
+                            <li>PLANTED:</li>
+                            <li>HARVESTED:</li>
+                            <li>BRAND:</li>
+                        </ul>
+                        <!-- <div class="hr">----</div> -->
+                        <div class="info-description pb-2">
+                            Boosts mood, apetite, sleepiness and reduces anxiety
+                        </div>
+                    </div>
+                    <img class="img" src="./img/sativa.png" alt="">
+                    <!-- <div class="col-4 border img-wrap">
+                        <img class="img" src="./img/sativa.png" alt="">
+                    </div> -->
+                    <div class="col-6 mt-3">
+                        <div class="circle mb-3">
+                            <div class="counter-title">HRT</div>
+                            <div class="counter" data-target="18"></div>
+                        </div>
+                        <div class="circle">
+                            <div class="counter-title">GRR</div>
+                            <div class="counter" data-target="18"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle">
-                    <div class="counter-title">GDW</div>
-                    <div class="counter" data-target="20"></div>
-                </div>
-                <div class="circle">
-                    <div class="counter-title">KFT</div>
-                    <div class="counter" data-target="83"></div>
-                </div>
-            </div>
+            </center>
         </section>
+
+
 
         <footer class="container justify-content-center">
 
@@ -335,18 +384,18 @@
         //nav items
         let navItems = document.querySelectorAll('.nav-item');
         console.log(navItems);
-        
-        const navItem = (item)=>{
 
-            navItems.forEach(el=>{
+        const navItem = (item) => {
+
+            navItems.forEach(el => {
                 if (!el.classList == 'active') {
                     // el.classList.remove("active");
                     item.classList.add("active");
-                }else{
+                } else {
                     el.classList.remove("active");
                 }
             });
-            
+
         }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
