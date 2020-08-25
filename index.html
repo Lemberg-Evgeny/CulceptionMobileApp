@@ -45,6 +45,7 @@
             padding: 0;
             justify-content: center;
             user-select: none;
+            min-height: 100vh;
         }
 
         .main-container {
@@ -122,6 +123,7 @@
         .info {
             background: #393b3d;
             border-radius: 15px;
+            max-width: 15em;
         }
 
         .info-title {
@@ -142,15 +144,16 @@
         .info-description {
             font-family: Montserrat-light;
             font-size: .6em;
+            padding-right: 20%;
         }
-       
+
 
         .wrap {
             position: relative;
         }
 
         .img {
-           z-index: 10;
+            z-index: 10;
             position: absolute;
             margin-left: 35%;
             block-size: 11em;
@@ -262,10 +265,11 @@
 
 
         <section class="content container border">
-            <center>
-                <div class="slogan">wi make it personal</div>
-                <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
-
+            <!-- <center> -->
+                <div class="row">
+                    <div class="slogan">wi make it personal</div>
+                    <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
+                </div>
                 <div class="row justify-content-center mb-3 border">
                     <div class="col">
                         <div class="circle">
@@ -288,12 +292,12 @@
                 </div>
 
                 <div class="row pl-2 wrap mb-3 border">
-                    <div class="col-6 info mt-2 text-left">
+                    <div class="col info mt-2 text-left border">
                         <div class="info-title pt-3">sativa</div>
                         <ul class="info-data">
-                            <li>PLANTED:</li>
-                            <li>HARVESTED:</li>
-                            <li>BRAND:</li>
+                            <li>PLANTED: <span class="i-data">453</span></li>
+                            <li>HARVESTED: <span class="i-data">56576</span></li>
+                            <li>BRAND: <span class="i-data">21</span></li>
                         </ul>
                         <!-- <div class="hr">----</div> -->
                         <div class="info-description pb-2">
@@ -304,7 +308,7 @@
                     <!-- <div class="col-4 border img-wrap">
                         <img class="img" src="./img/sativa.png" alt="">
                     </div> -->
-                    <div class="col-6 mt-3">
+                    <div class="col-4 mt-3 border justify-content-end d-flex">
                         <div class="circle mb-3">
                             <div class="counter-title">HRT</div>
                             <div class="counter" data-target="18"></div>
@@ -315,12 +319,12 @@
                         </div>
                     </div>
                 </div>
-            </center>
+            <!-- </center> -->
         </section>
 
 
 
-        <footer class="container justify-content-center">
+        <footer class="container justify-content-center fixed-bottom">
 
             <ul class="nav row">
                 <li class="col m-1">
@@ -401,13 +405,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
