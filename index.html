@@ -291,13 +291,13 @@
                     <div class="col">
                         <div class="circle">
                             <div class="counter-title">GDW</div>
-                            <div class="counter" data-target="47"></div>
+                            <div class="counter" data-target="59"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="circle">
                             <div class="counter-title">KFT</div>
-                            <div class="counter" data-target="39"></div>
+                            <div class="counter" data-target="47"></div>
                         </div>
                     </div>
                 </div>
@@ -322,11 +322,11 @@
                     <div class="col-4 col-md-circles mt-3">
                         <div class="circle mb-3">
                             <div class="counter-title">HRT</div>
-                            <div class="counter" data-target="18"></div>
+                            <div class="counter" data-target="64"></div>
                         </div>
                         <div class="circle">
                             <div class="counter-title">GRR</div>
-                            <div class="counter" data-target="18"></div>
+                            <div class="counter" data-target="79"></div>
                         </div>
                     </div>
                 </div>
@@ -372,47 +372,7 @@
     <!-- </center> -->
 
     <!-- Optional JavaScript -->
-    <script>
-        const counters = document.querySelectorAll('.counter');
-        const speed = 30; // The lower the slower
-
-        counters.forEach(counter => {
-            const updateCount = () => {
-
-                const target = +counter.getAttribute('data-target');
-                let count = +counter.innerText;
-                // Check if target is reached
-                if (count < target) {
-                    // Add inc to count and output in counter
-                    counter.innerText = count + 1;
-                    // Call function every ms
-                    setTimeout(updateCount, speed);
-                } else {
-                    counter.innerText = target;
-
-                }
-            };
-
-            updateCount();
-        });
-
-        //nav items
-        let navItems = document.querySelectorAll('.nav-item');
-        console.log(navItems);
-
-        const navItem = (item) => {
-
-            navItems.forEach(el => {
-                if (!el.classList == 'active') {
-                    // el.classList.remove("active");
-                    item.classList.add("active");
-                } else {
-                    el.classList.remove("active");
-                }
-            });
-
-        }
-    </script>
+  
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -422,6 +382,47 @@
         </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+          <script>
+            const counters = document.querySelectorAll('.counter');
+            const speed = 30; // The lower the slower
+    
+            counters.forEach(counter => {
+                const updateCount = () => {
+    
+                    const target = +counter.getAttribute('data-target');
+                    let count = +counter.innerText;
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = count + 1;
+                        // Call function every ms
+                        setTimeout(updateCount, speed);
+                    } else {
+                        counter.innerText = target;
+    
+                    }
+                };
+    
+                updateCount();
+            });
+    
+            //nav items
+            let navItems = document.querySelectorAll('.nav-item');
+            console.log(navItems);
+    
+            const navItem = (item) => {
+    
+                navItems.forEach(el => {
+                    if (!el.classList == 'active') {
+                        // el.classList.remove("active");
+                        item.classList.add("active");
+                    } else {
+                        el.classList.remove("active");
+                    }
+                });
+    
+            }
         </script>
 </body>
 
