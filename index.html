@@ -90,8 +90,9 @@
             margin-top: -5%;
         }
 
-        .content-block{
+        .content-block {
             /* min-height: 100vh; */
+            padding: 0 auto;
         }
 
         .circle {
@@ -103,6 +104,7 @@
             border: 6px solid #292d2c;
             font-family: Oswald;
             /* font-size: 1.4em; */
+            margin: 0 auto;
         }
 
         .counter-title {
@@ -127,7 +129,10 @@
         .info {
             background: #393b3d;
             border-radius: 15px;
-            max-width: 15em;
+            /* max-width: 18em; */
+            padding: 4% 3%;
+            margin-top: 15%;
+            /* width: 100%; */
         }
 
         .info-title {
@@ -153,6 +158,7 @@
 
 
         .wrap {
+            min-height: fit-content;
             position: relative;
         }
 
@@ -160,16 +166,16 @@
             z-index: 10;
             position: absolute;
             margin-left: 35%;
-            block-size: 11em;
-            /* left: -1em; */
+            block-size: 13em;
+            left: -4em;
         }
 
-        .col-md-circles{
+        /* .col-md-circles {
             margin-left: 20%;
             padding-left: 10%;
             margin-right: 0;
             padding-right: 0;
-        }
+        } */
 
         /* content: attr(data-target)" %"; */
 
@@ -277,64 +283,60 @@
 
         <section class="content-block container">
             <!-- <center> -->
+
                 <div class="row">
                     <div class="slogan">wi make it personal</div>
                     <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
                 </div>
-                <div class="row justify-content-center mb-3">
-                    <div class="col">
-                        <div class="circle">
-                            <div class="counter-title">HRT</div>
-                            <div class="counter" data-target="18"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="circle">
-                            <div class="counter-title">GDW</div>
-                            <div class="counter" data-target="59"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="circle">
-                            <div class="counter-title">KFT</div>
-                            <div class="counter" data-target="47"></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row pl-2 wrap mb-3">
-                    <div class="col info mt-2 text-left">
-                        <div class="info-title pt-3">sativa</div>
+
+            <div class="row py-3 mb-3">
+                <div class="col col-4 border p-0">
+                    <div class="circle">
+                        <div class="counter-title">HRT</div>
+                        <div class="counter" data-target="18"></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-title">sativa</div>
                         <ul class="info-data">
                             <li>PLANTED: <span class="i-data">453</span></li>
                             <li>HARVESTED: <span class="i-data">56576</span></li>
                             <li>BRAND: <span class="i-data">21</span></li>
                         </ul>
-                        <!-- <div class="hr">----</div> -->
+                        <div class="hr">----</div>
                         <div class="info-description pb-2">
                             Boosts mood, apetite, sleepiness and reduces anxiety
-                        </div>
-                    </div>
-                    <img class="img" src="./img/sativa.png" alt="">
-                    <!-- <div class="col-4 border img-wrap">
-                        <img class="img" src="./img/sativa.png" alt="">
-                    </div>  justify-content-end d-flex-->
-                    <div class="col-4 col-md-circles mt-3">
-                        <div class="circle mb-3">
-                            <div class="counter-title">HRT</div>
-                            <div class="counter" data-target="64"></div>
-                        </div>
-                        <div class="circle">
-                            <div class="counter-title">GRR</div>
-                            <div class="counter" data-target="79"></div>
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, aperiam beatae alias totam nemo perferendis expedita sequi voluptas praesentium illum, odit quaerat minus! Officia fuga, laborum facilis ad minima obcaecati. Natus, maxime tempora veritatis illum recusandae cupiditate odio earum qui dolorum repudiandae quae sequi illo sint laboriosam rerum magnam error. -->
                         </div>
                     </div>
                 </div>
-            <!-- </center> -->
+                <div class="col col-4 border wrap">
+                    <div class="circle">
+                        <div class="counter-title">GDW</div>
+                        <div class="counter" data-target="59"></div>
+                    </div>
+                    <img class="img" src="./img/sativa.png" alt="">
+                </div>
+                <div class="col col-4 border">
+                    <div class="circle">
+                        <div class="counter-title">HRT</div>
+                        <div class="counter" data-target="64"></div>
+                    </div>
+                    <div class="circle mt-4">
+                        <div class="counter-title">GRR</div>
+                        <div class="counter" data-target="79"></div>
+                    </div>
+                    <div class="circle mt-2">
+                        <div class="counter-title">YRD</div>
+                        <div class="counter" data-target="43"></div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
 
-<!-- fixed-bottom -->
+        <!-- fixed-bottom -->
         <footer class="container justify-content-center">
 
             <ul class="nav row">
@@ -372,7 +374,7 @@
     <!-- </center> -->
 
     <!-- Optional JavaScript -->
-  
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -383,47 +385,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
         </script>
-          <script>
-            const counters = document.querySelectorAll('.counter');
-            const speed = 30; // The lower the slower
-    
-            counters.forEach(counter => {
-                const updateCount = () => {
-    
-                    const target = +counter.getAttribute('data-target');
-                    let count = +counter.innerText;
-                    // Check if target is reached
-                    if (count < target) {
-                        // Add inc to count and output in counter
-                        counter.innerText = count + 1;
-                        // Call function every ms
-                        setTimeout(updateCount, speed);
-                    } else {
-                        counter.innerText = target;
-    
-                    }
-                };
-    
-                updateCount();
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 30; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+
+                const target = +counter.getAttribute('data-target');
+                let count = +counter.innerText;
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + 1;
+                    // Call function every ms
+                    setTimeout(updateCount, speed);
+                } else {
+                    counter.innerText = target;
+
+                }
+            };
+
+            updateCount();
+        });
+
+        //nav items
+        let navItems = document.querySelectorAll('.nav-item');
+        console.log(navItems);
+
+        const navItem = (item) => {
+
+            navItems.forEach(el => {
+                if (!el.classList == 'active') {
+                    // el.classList.remove("active");
+                    item.classList.add("active");
+                } else {
+                    el.classList.remove("active");
+                }
             });
-    
-            //nav items
-            let navItems = document.querySelectorAll('.nav-item');
-            console.log(navItems);
-    
-            const navItem = (item) => {
-    
-                navItems.forEach(el => {
-                    if (!el.classList == 'active') {
-                        // el.classList.remove("active");
-                        item.classList.add("active");
-                    } else {
-                        el.classList.remove("active");
-                    }
-                });
-    
-            }
-        </script>
+
+        }
+    </script>
 </body>
 
 </html>
