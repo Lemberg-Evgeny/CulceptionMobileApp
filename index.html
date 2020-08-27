@@ -9,91 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/css/global.css">
     <style>
-        @font-face {
-            font-family: Montserrat-light;
-            src: url(./fonts/Montserrat/Montserrat-Light.ttf);
-        }
-
-        @font-face {
-            font-family: Enfatica;
-            src: url(./fonts/Enfatica/Enfatica.otf);
-        }
-
-        @font-face {
-            font-family: Oswald;
-            src: url(./fonts/Oswald/Oswald-Light.ttf);
-        }
-
-
-
-
-        *,
-        html {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            background-color: #26282a;
-            color: white;
-            /* min-height: 100vh; */
-            margin: 0;
-            padding: 0;
-            justify-content: center;
-            user-select: none;
-            min-height: 100vh;
-        }
-
-        .main-container {
-            /* min-height: 100vh; */
-            /* min-width: 100vw; */
-            margin: 0;
-            padding: 0;
-        }
-
-        .bg-head {
-            background-image: url(./img/header.png);
-            background-repeat: no-repeat;
-            background-position: center top;
-            /* background-size: contain; */
-            /* border: 1px solid white; */
-            /* min-height: 550px; */
-            min-height: 355px;
-            position: relative;
-        }
-
-        .logo {
-            margin-top: 10%;
-            box-shadow: 0 0 5px black;
-            border-radius: 50%;
-            /* display: block; */
-        }
-
-        .logo-title {
-            text-transform: uppercase;
-            font-family: Enfatica;
-            font-size: 3.5em;
-            text-shadow: 0 0 5px black;
-            /* margin-top: -5%; */
-            /* border: 1px solid white; */
-        }
-
-        .logo-sub {
-            font-family: Oswald;
-            font-size: 0.7em;
-            text-transform: uppercase;
-            text-shadow: 0 0 5px black;
-            margin-top: -5%;
-        }
-
-        .content-block {
-            /* min-height: 100vh; */
-            padding: 0 auto;
-        }
 
         .circle {
             width: 5.2em;
@@ -169,97 +87,7 @@
             block-size: 13em;
             left: -4em;
         }
-
-        /* .col-md-circles {
-            margin-left: 20%;
-            padding-left: 10%;
-            margin-right: 0;
-            padding-right: 0;
-        } */
-
-        /* content: attr(data-target)" %"; */
-
-        .nav {
-            /* display: flex; */
-            overflow: hidden;
-            flex-wrap: nowrap;
-            /* position: relative; */
-            background: #000;
-            flex-direction: row;
-            justify-content: flex-end;
-            /* min-height: 5vh; */
-
-        }
-
-        .copyright {
-            font-size: .4em;
-            /* margin-left: .1em */
-            /* margin-top: .1em; */
-            /* word-break: keep-all; */
-        }
-
-        .find .fa {
-            margin-right: .3em;
-        }
-
-        .nav-item {
-            color: #fff;
-            cursor: pointer;
-            transform: skew(-10deg);
-            -webkit-transform: skew(-10deg);
-            -moz-transform: skew(-10deg);
-            -o-transform: skew(-10deg);
-            font-size: 1em;
-            color: white;
-            text-transform: uppercase;
-            flex-direction: column;
-            padding: 5px 10px;
-            margin-left: -1px;
-
-        }
-
-        .nav-item:hover,
-        .nav-item.active {
-            min-width: 100px;
-            box-shadow: 0 0 5px rgb(255, 255, 255);
-            box-sizing: content-box;
-        }
-
-        .nav-item .nav-text {
-            font-size: .5em;
-            transform: skew(10deg);
-            -webkit-transform: skew(10deg);
-            -moz-transform: skew(10deg);
-            -o-transform: skew(10deg);
-            font-family: Montserrat-light;
-            text-shadow: 0 0 5px black;
-        }
-
-        .nav-item .fa {
-            transform: skew(10deg);
-            -webkit-transform: skew(10deg);
-            -moz-transform: skew(10deg);
-            -o-transform: skew(10deg);
-            text-shadow: 0 0 5px black;
-            margin-top: .2em;
-        }
-
-        #btn-my-package {
-            background-image: linear-gradient(to right, #bbbd5b, #e59979);
-        }
-
-        #btn-lab-tests {
-            background-image: linear-gradient(to right, #be7080, #a46fcd);
-        }
-
-        #btn-more-info {
-            background-image: linear-gradient(to right, #6d9eff, #71bffe);
-        }
-
-        #btn-share {
-            margin-right: -10px;
-            background-image: linear-gradient(to right, #87d4ab, #95ff6d);
-        }
+       
     </style>
 
     <title>My Package</title>
@@ -273,7 +101,7 @@
             <div class="row">
                 <div class="bg-head col-md text-center">
                     <!-- <img class="bg_head" src="./img/header.png" alt=""> -->
-                    <img class="logo" src=".\img\logo.png" alt="">
+                    <img class="logo" src=".\public\img\logo.png" alt="">
                     <div class="logo-title">Culception</div>
                     <div class="logo-sub">the next cultivation era</div>
                 </div>
