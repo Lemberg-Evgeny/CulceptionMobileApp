@@ -1,22 +1,256 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\public\fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="..\public\css\global.css">
+    <style>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+        .circle {
+            width: 5.2em;
+            height: 5.2em;
+            background: #2f5c43;
+            border-radius: 50%;
+            position: relative;
+            border: 6px solid #292d2c;
+            font-family: Oswald;
+            /* font-size: 1.4em; */
+            margin: 0 auto;
+        }
+
+        .counter-title {
+            font-size: 1em;
+            position: absolute;
+            left: 1.4em;
+            top: .2em;
+        }
+
+        .counter {
+            font-size: 2em;
+            position: absolute;
+            left: .5em;
+            top: .7em;
+        }
+
+        .counter::after {
+            content: "%";
+            font-size: .5em;
+        }
+
+        .info {
+            background: #393b3d;
+            border-radius: 15px;
+            /* max-width: 18em; */
+            padding: 4% 3%;
+            margin-top: 15%;
+            /* width: 100%; */
+        }
+
+        .info-title {
+            text-transform: uppercase;
+            font-family: Montserrat-light;
+            font-size: 1.4em;
+            font-weight: bolder;
+        }
+
+        .info-data {
+            text-transform: uppercase;
+            font-family: Montserrat-light;
+            font-size: .6em;
+            font-weight: bolder;
+            list-style: none;
+        }
+
+        .info-description {
+            font-family: Montserrat-light;
+            font-size: .6em;
+            padding-right: 20%;
+        }
+
+
+        .wrap {
+            min-height: fit-content;
+            position: relative;
+        }
+
+        .img {
+            z-index: 10;
+            position: absolute;
+            margin-left: 35%;
+            block-size: 13em;
+            left: -4em;
+        }
+       
+    </style>
+
+    <title>My Package</title>
+</head>
+
+<body>
+    <!-- <center> -->
+    <div class="main-container container justify-content-center">
+
+        <header class="container">
+            <div class="row">
+                <div class="bg-head col-md text-center">
+                    <!-- <img class="bg_head" src="./img/header.png" alt=""> -->
+                    <img class="logo" src="..\public\img\logo.png" alt="">
+                    <div class="logo-title">Culception</div>
+                    <div class="logo-sub">the next cultivation era</div>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="content-block container">
+
+                <div class="row">
+                    <div class="slogan">wi make it personal</div>
+                    <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
+                </div>
+
+
+            <div class="row py-3 mb-3">
+                <div class="col col-4 p-0">
+                    <div class="circle">
+                        <div class="counter-title">HRT</div>
+                        <div class="counter" data-target="18"></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-title">sativa</div>
+                        <ul class="info-data">
+                            <li>PLANTED: <span class="i-data">453</span></li>
+                            <li>HARVESTED: <span class="i-data">56576</span></li>
+                            <li>BRAND: <span class="i-data">21</span></li>
+                        </ul>
+                        <div class="hr">----</div>
+                        <div class="info-description pb-2">
+                            Boosts mood, apetite, sleepiness and reduces anxiety
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, aperiam beatae alias totam nemo perferendis expedita sequi voluptas praesentium illum, odit quaerat minus! Officia fuga, laborum facilis ad minima obcaecati. Natus, maxime tempora veritatis illum recusandae cupiditate odio earum qui dolorum repudiandae quae sequi illo sint laboriosam rerum magnam error. -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4 wrap">
+                    <div class="circle">
+                        <div class="counter-title">GDW</div>
+                        <div class="counter" data-target="59"></div>
+                    </div>
+                    <img class="img" src="..\public\img\sativa.png" alt="">
+                </div>
+                <div class="col col-4">
+                    <div class="circle">
+                        <div class="counter-title">HRT</div>
+                        <div class="counter" data-target="64"></div>
+                    </div>
+                    <div class="circle mt-4">
+                        <div class="counter-title">GRR</div>
+                        <div class="counter" data-target="79"></div>
+                    </div>
+                    <div class="circle mt-2">
+                        <div class="counter-title">YRD</div>
+                        <div class="counter" data-target="43"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="container justify-content-center">
+
+            <ul class="nav row">
+                <li class="col m-1">
+                    <div class="copyright row">All rights reserved for Culception, StreetName 34, Herzliya.</div>
+                    <!-- <div class="copyright row">StreetName 34, Herzliya.</div> -->
+                    <div class="copyright row mt-1">Find us:</div>
+                    <div class="row mt-1 find">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li id="btn-my-package" onclick="navItem(this)" class="nav-item col-2 text-center active" name="nav-item">
+                    <div class="fa fa-cube" aria-hidden="true"></div>
+                    <!-- <div class="fa fa-inbox" aria-hidden="true"></div> -->
+                    <div class="nav-text">my package</div>
+                </li>
+                <li id="btn-lab-tests" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-flask" aria-hidden="true"></div>
+                    <div class="nav-text">lab tests</div>
+                </li>
+                <li id="btn-more-info" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-info-circle" aria-hidden="true"></div>
+                    <div class="nav-text">more info</div>
+                </li>
+                <li id="btn-share" onclick="navItem(this)" class="nav-item col-2 text-center" name="nav-item">
+                    <div class="fa fa-share-alt" aria-hidden="true"></div>
+                    <div class="nav-text">share</div>
+                </li>
+            </ul>
+
+        </footer>
+    </div>
+    <!-- </center> -->
 
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 30; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+
+                const target = +counter.getAttribute('data-target');
+                let count = +counter.innerText;
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + 1;
+                    // Call function every ms
+                    setTimeout(updateCount, speed);
+                } else {
+                    counter.innerText = target;
+
+                }
+            };
+
+            updateCount();
+        });
+
+        //nav items
+        let navItems = document.querySelectorAll('.nav-item');
+        console.log(navItems);
+
+        const navItem = (item) => {
+
+            navItems.forEach(el => {
+                if (!el.classList == 'active') {
+                    // el.classList.remove("active");
+                    item.classList.add("active");
+                } else {
+                    el.classList.remove("active");
+                }
+            });
+
+        }
+    </script>
+</body>
+
 </html>
