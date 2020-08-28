@@ -25,6 +25,12 @@ app.get('/', urlencodedParser, (req, res) => {
     
   });
 
+app.get('/lab-tests', urlencodedParser, (req, res) => {
+    console.log('app.get "/lab-tests"');
+    res.render('Lab.ejs');
+    
+  });
+
 
 app.listen(PORT, () => {
     console.log('Server has bin started PORT: ' + PORT);
