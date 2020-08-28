@@ -4,13 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "app.js"
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@popperjs/core": "^2.4.4",
     "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1"
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "nodemon": "^2.0.4"
   }
 }
