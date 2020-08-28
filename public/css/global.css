@@ -91,6 +91,11 @@
 
  }
 
+ /* .nav ul li a{
+     text-decoration: none;
+     color: white;
+ } */
+
  .copyright {
      font-size: .4em;
      /* margin-left: .1em */
