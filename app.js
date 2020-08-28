@@ -21,12 +21,12 @@ app.use(bodyParser.json());
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    res.render('Package.ejs');
-    
+    // res.render('Package.ejs');
+    res.render('Lab.ejs');
   });
 
-app.get('/lab-tests', urlencodedParser, (req, res) => {
-    console.log('app.get "/lab-tests"');
+app.get('/lab', urlencodedParser, (req, res) => {
+    console.log('app.get "/lab"');
     res.render('Lab.ejs');
     
   });
