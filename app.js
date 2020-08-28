@@ -26,15 +26,35 @@ app.use(express.static(__dirname + '/node_modules'));
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    res.render('Package.ejs');
+    res.render('package.ejs', {
+        title: 'My Package'
+    });
     // res.render('Lab.ejs');
-  });
+});
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('Lab.ejs');
-    
-  });
+    res.render('lab.ejs', {
+        title: 'Lab tests'
+    });
+
+});
+
+app.get('/more-info', urlencodedParser, (req, res) => {
+    console.log('app.get "/more-info"');
+    res.render('more-info.ejs', {
+        title: 'More Info'
+    });
+
+});
+
+app.get('/share', urlencodedParser, (req, res) => {
+    console.log('app.get "/share"');
+    res.render('share.ejs', {
+        title: 'Share'
+    });
+
+});
 
 
 app.listen(PORT, () => {
