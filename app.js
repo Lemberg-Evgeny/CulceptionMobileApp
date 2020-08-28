@@ -10,19 +10,22 @@ const urlencodedParser = bodyParser.urlencoded({
 });
 
 // middlewares
-app.set('views', './views');
+app.set('views', './public/views');
+app.set('css', './public/css');
+app.set('js', './public/js');
 app.set("view engine", "ejs");
 
-app.use('/', express.static(__dirname + '/'));
+// app.use('/', express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
 // app.use('/', express.static(path.join(__dirname, '/')));
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    // res.render('Package.ejs');
-    res.render('Lab.ejs');
+    res.render('Package.ejs');
+    // res.render('Lab.ejs');
   });
 
 app.get('/lab', urlencodedParser, (req, res) => {
