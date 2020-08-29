@@ -58,6 +58,11 @@ app.get('/share', urlencodedParser, (req, res) => {
     });
 
 });
+app.get('/t', urlencodedParser, (req, res) => {
+    console.log('app.get "/t"');
+    res.render('t.ejs');
+
+});
 
 
 app.listen(PORT, () => {
