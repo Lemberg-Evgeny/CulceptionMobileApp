@@ -11,7 +11,7 @@ const urlencodedParser = bodyParser.urlencoded({
 });
 
 // middlewares
-app.set('views', './public/views');
+app.set('views', './views');
 // app.set('views', path.join(__dirname, './views'));
 app.set('css', './public/css');
 app.set('js', './public/js');
