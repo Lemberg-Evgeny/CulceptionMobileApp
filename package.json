@@ -14,7 +14,7 @@
   "dependencies": {
     "@popperjs/core": "^2.4.4",
     "bootstrap": "^4.5.2",
-    "ejs": "^3.1.5",
+    "ejs": "0.8.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1"
   }
