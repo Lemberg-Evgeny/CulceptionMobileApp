@@ -31,10 +31,10 @@ app.use(express.static(__dirname + '/views'));
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    // res.render('package.ejs', {
-    //     title: 'My Package'
-    // });
-    res.end('hello from server app.js');
+    res.render('package.ejs', {
+        title: 'My Package'
+    });
+    // res.end('hello from server app.js');
 });
 
 app.get('/lab', urlencodedParser, (req, res) => {
