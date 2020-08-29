@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const ejs=require('ejs');
+const ejs = require('ejs');
 
 const app = express();
 
@@ -39,7 +39,9 @@ app.get('/', urlencodedParser, (req, res) => {
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('lab.ejs');
+    res.render('lab.ejs', {
+        title: 'lab'
+    });
 
 });
 
