@@ -25,9 +25,7 @@ app.use(express.static(__dirname + '/node_modules'));
 app.use(bodyParser.json());
 
 
-
 // app.use("/public", express.static(__dirname + '/public'));
-
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
@@ -38,7 +36,9 @@ app.get('/', urlencodedParser, (req, res) => {
 });
 
 app.get('/lab', urlencodedParser, (req, res) => {
-    res.render('lab.ejs', {title: 'lab'})
+    res.render('lab.ejs', {
+        title: 'lab'
+    });
 });
 
 app.get('/more-info', urlencodedParser, (req, res) => {
@@ -46,7 +46,6 @@ app.get('/more-info', urlencodedParser, (req, res) => {
     res.render('more-info.ejs', {
         title: 'More Info'
     });
-
 });
 
 app.get('/share', urlencodedParser, (req, res) => {
@@ -54,9 +53,7 @@ app.get('/share', urlencodedParser, (req, res) => {
     res.render('share.ejs', {
         title: 'Share'
     });
-
 });
-
 
 app.listen(PORT, () => {
     console.log('Server has bin started PORT: ' + PORT);
