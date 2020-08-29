@@ -38,11 +38,7 @@ app.get('/', urlencodedParser, (req, res) => {
 });
 
 app.get('/lab', urlencodedParser, (req, res) => {
-    console.log('app.get "/lab"');
-    res.render('lab.ejs', {
-        title: 'lab'
-    });
-
+    res.render('lab.ejs', {title: 'lab'})
 });
 
 app.get('/more-info', urlencodedParser, (req, res) => {
