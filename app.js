@@ -39,9 +39,7 @@ app.get('/', urlencodedParser, (req, res) => {
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('lab.ejs', {
-        title: 'Lab tests'
-    });
+    res.render('lab.ejs');
 
 });
 
