@@ -11,17 +11,18 @@ const urlencodedParser = bodyParser.urlencoded({
 });
 
 // middlewares
-app.set('views', './views');
+app.set('views', './public/views');
 // app.set('views', path.join(__dirname, './views'));
-app.set('css', './public/css');
-app.set('js', './public/js');
-app.set('img', './public/img');
+// app.set('css', './public/css');
+// app.set('js', './public/js');
+// app.set('img', './public/img');
 app.set("view engine", "ejs");
 
 app.use('/', express.static(__dirname + '/'));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/node_modules'));
-app.use(express.static(__dirname + '/views'));
+// app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/node_modules'));
+// app.use(express.static(__dirname + '/views'));
+
 
 
 // app.use("/public", express.static(__dirname + '/public'));
@@ -38,7 +39,7 @@ app.get('/', urlencodedParser, (req, res) => {
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('lab', {
+    res.render('lab.ejs', {
         title: 'Lab tests'
     });
 
