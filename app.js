@@ -19,10 +19,9 @@ app.set('img', './public/img');
 app.set("view engine", "ejs");
 
 app.use('/', express.static(__dirname + '/'));
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
-app.use(express.static(__dirname + './views'));
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/views'));
 
 
 // app.use("/public", express.static(__dirname + '/public'));
@@ -39,7 +38,7 @@ app.get('/', urlencodedParser, (req, res) => {
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('lab.ejs', {
+    res.render('lab', {
         title: 'Lab tests'
     });
 
