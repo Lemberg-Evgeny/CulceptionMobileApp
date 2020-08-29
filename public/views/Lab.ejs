@@ -16,7 +16,6 @@
 <body>
     <div class="main-container container justify-content-center">
 
-        <%# include('./partials/header-logo'); -%>
         <header class="container">
             <div class="row">
                 <div class="bg-head col-md text-center">
@@ -30,16 +29,13 @@
         <section class="content-block container">
 
             <div class="row">
-                <div class="slogan">this is LAB TESTS page.</div>
-                <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
+                <div class="slogan">LAB</div>
+                <div class="sub-slogan"></div>
             </div>
-
-
 
 
         </section>
 
-        <%# include('./partials/footer-navigation'); -%>
         <footer class="container justify-content-center">
 
             <ul class="nav row">
@@ -53,11 +49,11 @@
                     </div>
                 </li>
                 <li id="btn-my-package" onclick="navItem(this),  location.href='/'"
-                    class="nav-item col-2 text-center active" name="my-package">
+                    class="nav-item col-2 text-center" name="my-package">
                     <div class="fa fa-cube" aria-hidden="true"></div>
                     <div class="nav-text">my package</div>
                 </li>
-                <li id="btn-lab-tests" onclick="navItem(this), location.href='/lab'" class="nav-item col-2 text-center"
+                <li id="btn-lab-tests" onclick="navItem(this), location.href='/lab'" class="nav-item col-2 text-center active"
                     name="lab-tests">
                     <div class="fa fa-flask" aria-hidden="true"></div>
                     <div class="nav-text">lab tests</div>
@@ -78,9 +74,6 @@
     </div>
 
     <!-- Optional JavaScript -->
-
-
-    <%# include('./partials/bottom'); -%>
 
 
     <script src="jquery\dist\jquery.slim.min.js"></script>

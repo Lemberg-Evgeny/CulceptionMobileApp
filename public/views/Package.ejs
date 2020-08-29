@@ -1,17 +1,36 @@
-<%- include('./partials/head'); %>
-<link rel="stylesheet" href="css\myPackage.css">
-<title><%- title %></title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *;
+    img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+    style-src  'self' 'unsafe-inline' *"> -->
+    <link rel="icon" href="img\logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="css\global.css">
+    <link rel="stylesheet" href="css\myPackage.css">
+    <title><%- title %></title>
 </head>
 
 <body>
     <div class="main-container container justify-content-center">
-
-        <%- include('./partials/header-logo'); %>
+        <header class="container">
+            <div class="row">
+                <div class="bg-head col-md text-center">
+                    <img class="logo" src="..\img\logo.png" alt="">
+                    <div class="logo-title">Culception</div>
+                    <div class="logo-sub">the next cultivation era</div>
+                </div>
+            </div>
+        </header>
 
         <section class="content-block container">
 
             <div class="row">
-                <div class="slogan">ROOT PAGE Wi make it personal...</div>
+                <div class="slogan">PACKAGE Wi make it personal...</div>
                 <div class="sub-slogan">All the information about your plant providet by our in hous labs</div>
             </div>
 
@@ -61,10 +80,52 @@
 
         </section>
 
-        <%- include('./partials/footer-navigation'); %>
+        <footer class="container justify-content-center">
+
+            <ul class="nav row">
+                <li class="col m-1">
+                    <div class="copyright row">All rights reserved for Culception, StreetName 34, Herzliya.</div>
+                    <div class="copyright row mt-1">Find us:</div>
+                    <div class="row mt-1 find">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li id="btn-my-package" onclick="navItem(this),  location.href='/'"
+                    class="nav-item col-2 text-center active" name="my-package">
+                    <div class="fa fa-cube" aria-hidden="true"></div>
+                    <div class="nav-text">my package</div>
+                </li>
+                <li id="btn-lab-tests" onclick="navItem(this), location.href='/lab'" class="nav-item col-2 text-center"
+                    name="lab-tests">
+                    <div class="fa fa-flask" aria-hidden="true"></div>
+                    <div class="nav-text">lab tests</div>
+                </li>
+                <li id="btn-more-info" onclick="navItem(this), location.href='/more-info'"
+                    class="nav-item col-2 text-center" name="more-info">
+                    <div class="fa fa-info-circle" aria-hidden="true"></div>
+                    <div class="nav-text">more info</div>
+                </li>
+                <li id="btn-share" type="submit" onclick="navItem(this), location.href='/share'"
+                    class="nav-item col-2 text-center" name="share">
+                    <div class="fa fa-share-alt" aria-hidden="true"></div>
+                    <div class="nav-text">share</div>
+                </li>
+            </ul>
+
+        </footer>
     </div>
 
     <!-- Optional JavaScript -->
 
+    
+    
+    <script src="jquery\dist\jquery.slim.min.js"></script>
+    <script src="@popperjs\core\dist\umd\popper.min.js"></script>
+    <script src="bootstrap\dist\js\bootstrap.min.js"></script>
     <script src="js\myPackage.js"></script>
-    <%- include('./partials/bottom'); %>
+    <script src="js\main.js"></script>
+</body>
+
+</html>
