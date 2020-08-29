@@ -26,10 +26,10 @@ app.use(express.static(__dirname + '/node_modules'));
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    res.render('package.ejs', {
-        title: 'My Package'
-    });
-    // res.render('Lab.ejs');
+    // res.render('package.ejs', {
+    //     title: 'My Package'
+    // });
+    res.end('hello from server app.js');
 });
 
 app.get('/lab', urlencodedParser, (req, res) => {
