@@ -33,31 +33,23 @@ app.use(bodyParser.json());
 
 app.get('/', urlencodedParser, (req, res) => {
     console.log('app.get "/"');
-    res.render('package.ejs', {
-        title: 'My Package'
-    });
+    res.render('package.ejs');
     // res.end('hello from server app.js');
 });
 
 app.get('/lab', urlencodedParser, (req, res) => {
     console.log('app.get "/lab"');
-    res.render('lab.ejs', {
-        title: 'lab'
-    });
+    res.render('lab.ejs');
 });
 
 app.get('/more-info', urlencodedParser, (req, res) => {
     console.log('app.get "/more-info"');
-    res.render('more-info.ejs', {
-        title: 'More Info'
-    });
+    res.render('more-info.ejs');
 });
 
 app.get('/share', urlencodedParser, (req, res) => {
     console.log('app.get "/share"');
-    res.render('share.ejs', {
-        title: 'Share'
-    });
+    res.render('share.ejs');
 });
 
 app.listen(PORT, () => {
