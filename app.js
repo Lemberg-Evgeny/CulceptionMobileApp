@@ -23,12 +23,11 @@ app.use(express.static('public/views'));
 app.use(express.static('public/node_modules'));
 
 app.use('/', express.static(__dirname + '/'));
-// app.use(express.static(__dirname + '/public'));
-// app.use(express.static(__dirname + '/views'));
-// app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/node_modules'));
 
 app.use(bodyParser.json());
-
 
 // app.use("/public", express.static(__dirname + '/public'));
 
