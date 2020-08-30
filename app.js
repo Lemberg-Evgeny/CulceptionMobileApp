@@ -19,6 +19,9 @@ app.set('fonts', './public/fonts');
 app.set("view engine", "ejs");
 
 app.use(express.static('public'));
+app.use(express.static('public/views'));
+app.use(express.static('public/node_modules'));
+
 app.use('/', express.static(__dirname + '/'));
 // app.use(express.static(__dirname + '/public'));
 // app.use(express.static(__dirname + '/views'));
